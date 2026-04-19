@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "response_match_score": 0.5,
+    "final_response_match_v2": {
+      "threshold": 0.5,
+      "judgeModelOptions": {
+        "judgeModel": "gemini-1.5-flash",
+        "numSamples": 3
+      }
+    },
+    "hallucinations_v1": {
+      "threshold": 0.5,
+      "judgeModelOptions": {
+        "judgeModel": "gemini-1.5-flash",
+        "numSamples": 3
+      }
+    },
+    "rubric_based_final_response_quality_v1": {
+      "threshold": 0.5,
+      "judgeModelOptions": {
+        "judgeModel": "gemini-1.5-flash",
+        "numSamples": 3
+      },
+      "rubrics": [
+        {
+          "rubricId": "academic_insight",
+          "rubricContent": {
+            "textProperty": "The response provides deep academic insights beyond simple summary."
+          },
+          "description": "Evaluates the depth of research suggestions.",
+          "type": "FINAL_RESPONSE_QUALITY"
+        }
+      ]
+    }
+  }
+}
